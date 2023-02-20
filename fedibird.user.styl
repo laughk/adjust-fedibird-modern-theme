@@ -21,7 +21,7 @@ fedibird.com のモダンテーマ（ダーク・ライト共通）のデザイ�
 }
 
 @-moz-document regexp("https://fedibird.com/web/(?!statuses).*$") {
-/* 引用に含まれる画像の位置 */
+/* 引用に含まれる画像・動画の位置 */
 div.video-player.inline,
 div.media-gallery:nth-child(3) {
   left: 15%;
@@ -38,9 +38,15 @@ div.media-gallery:nth-child(3) {
   padding-top: 2.5px;
   padding-left: 2.5px;
 }
-
 .quote-status > a:nth-child(1) > span:nth-child(2) > bdi:nth-child(1) {
   padding-left: 0.25rem;
+}
+
+/* 引用に含まれる画像・動画の位置 */
+div.video-player.inline,
+div.media-gallery:nth-child(3) {
+  left: 15%;
+  width: 90% !important;
 }
 
 }
