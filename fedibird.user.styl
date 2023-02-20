@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name         Adjust-fedibird-modern-theme
+@version      20230219.06.23
+@namespace    userstyles.world/user/laughk
+@description  adujust "Modern" theme on fedibird.com. 
+fedibird.com のモダンテーマ（ダーク・ライト共通）のデザインを調整します
+@author       laughk
+@license      MIT License
+==/UserStyle== */
+
+@-moz-document regexp("https://fedibird.com/[^@]*") {
+/* アクションボタンの修正 */
+#mastodon .status__action-bar .icon-button::after,
+.public-layout .status__action-bar .icon-button::after,
+#mastodon .detailed-status__action-bar .icon-button::after,
+.public-layout .detailed-status__action-bar .icon-button::after {
+    display: none;
+ }
+
+
+}
+
+@-moz-document regexp("https://fedibird.com/web/(?!statuses).*$") {
+/* 引用に含まれる画像の位置 */
+div.video-player.inline,
+div.media-gallery:nth-child(3) {
+  left: 15%;
+  width: 90% !important;
+  padding: 1rem;
+}
+
+
+}
+
+@-moz-document url-prefix("https://fedibird.com/web/statuses/") {
+/*  statuses 表示の際の引用部分を調整  */
+.quote-status > a:nth-child(1) > div:nth-child(1) {
+  padding-top: 2.5px;
+  padding-left: 2.5px;
+}
+
+.quote-status > a:nth-child(1) > span:nth-child(2) > bdi:nth-child(1) {
+  padding-left: 0.25rem;
+}
+
+}
+
+@-moz-document domain("fedibird.com") {
+/* misskey などの横に大きめな絵文字の表示の調整 */
+img.emojione.custom-emoji {
+  width: unset !important;
+}
+span.reactions-bar__item__emoji {
+  width: unset !important;
+}
+}
+
+@-moz-document regexp("https://fedibird.com/[^@]*") {
+/* 引用の表示調整 */
+
+/* 引用アカウントのアイコンの位置の修正  */
+div.status__info:nth-child(1) > a:nth-child(1) > div:nth-child(1),
+div.quote-status.status-public > div.status__info > a.status__display-name > div.status__avatar {
+    top: revert !important;
+}
+div.status__info:nth-child(1) > a:nth-child(1) > span:nth-child(2),
+div.quote-status.status-public > div.status__info > a.status__display-name > .display-name{
+    padding-left: 35px !important; /* 本当は div.status__avatar に left revert; を指定できたほうがいいが、元の css で `15 px !important;` されてしまっているのでこちらの元の padding に +15px する */
+}
+
+
+/* 引用に含まれるテキストエリアの調整 */
+div.status__content:nth-child(2),
+div.quote-status.status-public > div.status__content.status__content--with-action {
+     padding: 0.725rem;   
+}
+
+}
