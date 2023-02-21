@@ -22,8 +22,8 @@ fedibird.com のモダンテーマ（ダーク・ライト共通）のデザイ�
 
 @-moz-document regexp("https://fedibird.com/web/(?!statuses).*$") {
 /* 引用に含まれる画像・動画の位置 */
-div.quote-status.status-public > div.video-player.inline,
-div.quote-status.status-public > div.media-gallery {
+div.quote-status > div.video-player.inline,
+div.quote-status > div.media-gallery {
   left: 15%;
   width: 90% !important;
   padding: 1rem;
@@ -43,8 +43,8 @@ div.quote-status.status-public > div.media-gallery {
 }
 
 /* 引用に含まれる画像・動画の位置 */
-div.quote-status.status-public > div.video-player.inline,
-div.quote-status.status-public > div.media-gallery {
+div.quote-status > div.video-player.inline,
+div.quote-status > div.media-gallery {
   left: 15%;
   width: 90% !important;
 }
@@ -66,19 +66,19 @@ span.reactions-bar__item__emoji {
 
 /* 引用アカウントのアイコンの位置の修正  */
 div.status__info:nth-child(1) > a:nth-child(1) > div:nth-child(1),
-div.quote-status.status-public > div.status__info > a.status__display-name > div.status__avatar {
+div.quote-status > div.status__info > a.status__display-name > div.status__avatar {
     top: revert !important;
 }
 div.status__info:nth-child(1) > a:nth-child(1) > span:nth-child(2),
-div.quote-status.status-public > div.status__info > a.status__display-name > .display-name{
+div.quote-status > div.status__info > a.status__display-name > .display-name{
     padding-left: 35px !important; /* 本当は div.status__avatar に left revert; を指定できたほうがいいが、元の css で `15 px !important;` されてしまっているのでこちらの元の padding に +15px する */
 }
 
 
 /* 引用に含まれるテキストエリアの調整 */
 div.status__content:nth-child(2),
-div.quote-status.status-public > div.status__content.status__content--with-action {
-     padding: 0.725rem;   
+div.quote-status > div.status__content.status__content--with-action {
+     padding: 0.725rem;
 }
 
 }
