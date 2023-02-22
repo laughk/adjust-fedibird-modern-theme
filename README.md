@@ -54,13 +54,23 @@ fedibird.com のモダンテーマ（ダーク・ライト共通）のデザイ�
 
 ![quote before](images/screenshot-quote-before.png)
 
+パブリックページ内の引用
+
+![quoted at public before](images/screenshot-quoted-at-public-page-before.png)
+
 #### 調整後
 
 ![quote ajusted](images/screenshot-quote-ajusted.png)
 
+パブリックページ内の引用
+
+![quoted at public ajusted](images/screenshot-quoted-at-public-page-ajusted.png)
+
 - 引用元アカウント情報のアイコンと名前, id の被りを解消します
 - 引用テキストと境界の隙間を調整します
 - 引用している画像が枠に収まるように調整をします
+
+ℹ️ この調整は意図したものではありませんが「マテリアル（v1-dark）」「マテリアル（v1-light）」「マテリアル（v2-dark）」「マテリアル（v2-light）」などの他のテーマの場合でも調整されることを確認しています。
 
 ### misskey.io などで使われる横に長い絵文字が圧縮されないようにする調整
 
